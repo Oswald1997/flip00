@@ -43,7 +43,7 @@ Chinese Academy of Sciences, Beijing 100084, China}%
     Twitter has become an important communication channel in times of emergency. The ubiquitousness of smartphones enables people to announce an emergency they’re observing in real-time. Because of this, more agencies are interested in programatically monitoring Twitter (i.e. disaster relief organizations and news agencies). But, it’s not always clear whether a person’s words are actually announcing a disaster or just an exaggerated expression. To handle this problem, we use BERT as classifier to identify whether a tweet is about disaster or not. Our method has achieved good results, ranking top 2.2$\%$ in Kaggle competition.
     \end{abstract}
     
-    \keywords{Deep Learning, Pretrained Language Model Mining, Natural Language Processing}%
+    \keywords{Deep Learning, Pretrained Language Model, Natural Language Processing}%
 
 
 \maketitle
@@ -99,7 +99,7 @@ Twitter has become an important communication channel in times of emergency. But
 
 Concretely, given a set of labeled data, we will use them to train a text classifier and use it to predict whether a tweet is about disaster or not. 
 
-In this paper, we first analyze the training set, including calculate distribution of characters and tokens of texts, then convert texts into standard input format which BERT can process. After that, we fine-tune BERT to adapt to disaster tweets prediction task. Our method has achieved good results, ranking top 2.3$\%$ in Kaggle competition.
+In this paper, we first analyze the training set, including calculate distribution of characters and tokens of texts, then convert texts into standard input format which BERT can process. After that, we fine-tune BERT to adapt to disaster tweets prediction task. Our method has achieved good results, ranking top 2.2$\%$ in Kaggle competition.
 
 
 %\todo{The problems faced by most current methods}
@@ -208,7 +208,7 @@ In this paper, we first analyze the training set, including calculate distributi
 
 \section{Related Work} \label{sec-relatedwork}
 
-\textbf{Rule-Based methods} classify texts into different categories using a set of pre-defined rules. The kind of methods are easy to implement and fast when running, also have good interpretability, while require a lot of manpower and time. What's worse, when facing a new problem, previous rules may become useless.
+\textbf{Rule-Based methods} classify texts into different categories using a set of pre-defined rules. This kind of methods are easy to implement and fast when running, also have good interpretability, while require a lot of manpower and time. What's worse, when facing a new problem, previous rules may become useless.
 
 \textbf{Statistical methods}, such as Naïve Bayes, support vector machines, hidden Markov model, and random forests, are more accurate than rule-based methods. On the other hand, statistical methods cannot take full advantage of large training data because the features are pre-defined.
 
@@ -328,7 +328,7 @@ We use bert-base and bert-large as our classification model, each of which has c
 \section{Experiments and Results} \label{sec-experiments}
 
 \subsection{Training setup}
-Hyparameters and other training setup are the same as specified in. Setup details can be seen in~\cref{tbl:training-setup}.
+Hyparameters and other training setup are the same as specified in~\cite{devlin2018bert}. Setup details can be seen in~\cref{tbl:training-setup}.
 
 \begin{table}  
     \centering
